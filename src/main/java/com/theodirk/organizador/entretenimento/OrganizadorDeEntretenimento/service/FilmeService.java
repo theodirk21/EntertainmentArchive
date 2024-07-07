@@ -2,10 +2,9 @@ package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.serv
 
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.exception.NotFoundException;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.TipoEntretenimento;
-import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.FilmeRequestDTO;
+import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.request.FilmeRequestDTO;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.entity.Filme;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.repository.FilmeRepository;
-import io.micrometer.common.util.StringUtils;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

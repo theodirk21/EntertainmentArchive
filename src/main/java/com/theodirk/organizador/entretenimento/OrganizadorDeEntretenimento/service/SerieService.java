@@ -2,7 +2,7 @@ package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.serv
 
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.exception.NotFoundException;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.TipoEntretenimento;
-import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.SerieRequestDTO;
+import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.request.SerieRequestDTO;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.entity.Serie;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.repository.SerieRepository;
 

@@ -1,6 +1,6 @@
 package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.exception;
 
-import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.ErroResponseDTO;
+import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.response.ErroResponseDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;

@@ -1,9 +1,8 @@
 package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.service;
 
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.exception.NotFoundException;
-import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.UsuarioResponseDTO;
+import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.response.UsuarioResponseDTO;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.entity.Grupo;
-import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.UsuarioRequestDTO;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.entity.Usuario;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.entity.UsuarioGrupo;
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.repository.GrupoRepository;

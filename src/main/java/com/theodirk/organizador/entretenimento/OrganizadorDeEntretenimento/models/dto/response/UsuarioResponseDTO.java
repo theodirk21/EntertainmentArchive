@@ -1,6 +1,5 @@
-package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto;
+package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.response;
 
-import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.entity.Grupo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.core.GrantedAuthorityDefaults;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -26,21 +27,22 @@ public class SecurityConfig {
                                                    CustomAdmFilter customAdmFilter) throws Exception{
 
         return httpSecurity
-                .authorizeHttpRequests(customizer -> {
-                        customizer.requestMatchers("/api/entretenimento").permitAll();
-                        customizer.requestMatchers(
-                                        "/v2/api-docs",
-                                        "/configuration/ui",
-                                        "/swagger-resources/**",
-                                        "/configuration/security",
-                                        "/swagger-ui.html",
-                                        "/webjars/**",
-                                        "/h2-console/**").permitAll();
-                        customizer.anyRequest().authenticated();
-                })
                 .csrf(csrf -> csrf.disable())
                 .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()))
                 .httpBasic(Customizer.withDefaults())
+                .authorizeHttpRequests(customizer -> {
+                    customizer.requestMatchers("/api/entretenimento").permitAll();
+                    customizer.requestMatchers(
+                            "/v3/api-docs/**",
+                            "/configuration/ui",
+                            "/swagger-resources/**",
+                            "/configuration/security",
+                            "/swagger-ui.html",
+                            "/swagger-ui/**",
+                            "/webjars/**",
+                            "/h2-console/**").permitAll();
+                    customizer.anyRequest().authenticated();
+                })
                 .authenticationProvider(authenticationProviderCustom)
                 .addFilterBefore(customAdmFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
@@ -57,15 +59,5 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().requestMatchers(
-                "/v2/api-docs",
-                "/configuration/ui",
-                "/swagger-resources/**",
-                "/configuration/security",
-                "/swagger-ui.html",
-                "/webjars/**");
-    }
 
 }

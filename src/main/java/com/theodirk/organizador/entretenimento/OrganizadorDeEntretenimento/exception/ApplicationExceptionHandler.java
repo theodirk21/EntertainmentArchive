@@ -1,7 +1,6 @@
 package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.exception;
 
-import ch.qos.logback.core.util.StringUtil;
-import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.ErroResponseDTO;
+import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.response.ErroResponseDTO;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +22,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
-import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Slf4j
 @Order(Ordered.HIGHEST_PRECEDENCE)

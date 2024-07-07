@@ -1,6 +1,5 @@
-package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto;
+package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.request;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -8,11 +7,13 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Data
-public class FilmeRequestDTO {
+public class SerieRequestDTO {
 
     private String nome;
 
     private Integer anoLancamento;
 
-    private String diretor;
+    private Integer numeroTemporadas;
+
+    private Integer numeroEpisodios;
 }

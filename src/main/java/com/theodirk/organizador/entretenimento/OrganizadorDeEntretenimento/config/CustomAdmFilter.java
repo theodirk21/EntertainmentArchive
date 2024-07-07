@@ -31,7 +31,7 @@ public class CustomAdmFilter extends OncePerRequestFilter {
                             "id-secret",
                             "Adm secret",
                             "id-secret",
-                            List.of("ADMIN")
+                            List.of("ADM")
                     );
                     Authentication authentication = new CustomCredentials(identificacaoUsuario);
 

@@ -1,4 +1,4 @@
-package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto;
+package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
