@@ -37,7 +37,7 @@ public class UsuarioController {
 
 
     @PostMapping(produces = APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADM')")
     @Operation(summary = "Criar usuário no banco de dados")
     @ApiResponses( value = {
             @ApiResponse(responseCode = "201", description = "Usuario criaado",  content = @Content( mediaType = APPLICATION_JSON_VALUE,
@@ -57,7 +57,7 @@ public class UsuarioController {
     }
 
     @GetMapping(value = "{login}", produces = APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADM')")
     @Operation(summary = "Encontrar usuário pelo login")
     @ApiResponses( value = {
             @ApiResponse(responseCode = "200", description = "Usuario requisitado"),
@@ -78,7 +78,7 @@ public class UsuarioController {
     }
 
     @GetMapping( produces = APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADM')")
     @Operation(summary = "Listar usuários criados")
     @ApiResponses( value = {
             @ApiResponse(responseCode = "200", description = "Lista de usuários"),

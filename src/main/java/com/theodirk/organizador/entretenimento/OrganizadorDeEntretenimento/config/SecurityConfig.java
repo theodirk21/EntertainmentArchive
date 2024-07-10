@@ -31,7 +31,6 @@ public class SecurityConfig {
                 .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()))
                 .httpBasic(Customizer.withDefaults())
                 .authorizeHttpRequests(customizer -> {
-                    customizer.requestMatchers("/api/entretenimento").permitAll();
                     customizer.requestMatchers(
                             "/v3/api-docs/**",
                             "/configuration/ui",
@@ -40,7 +39,8 @@ public class SecurityConfig {
                             "/swagger-ui.html",
                             "/swagger-ui/**",
                             "/webjars/**",
-                            "/h2-console/**").permitAll();
+                            "/h2-console/**",
+                            "/api/entretenimento").permitAll();
                     customizer.anyRequest().authenticated();
                 })
                 .authenticationProvider(authenticationProviderCustom)

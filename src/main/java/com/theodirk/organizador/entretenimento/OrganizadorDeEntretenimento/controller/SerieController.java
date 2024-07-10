@@ -34,7 +34,7 @@ public class SerieController {
 
 
     @PostMapping(produces = APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADM')")
     @Operation(summary = "Criar série na base de dados")
     @ApiResponses( value = {
             @ApiResponse(responseCode = "201", description = "Série criada",  content = @Content( mediaType = APPLICATION_JSON_VALUE,
@@ -90,7 +90,7 @@ public class SerieController {
 
     @PutMapping(value = "/{id}/update", produces = APPLICATION_JSON_VALUE)
     @Operation(summary = "Update serie pelo ID")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADM')")
     @ApiResponses( value = {
             @ApiResponse(responseCode = "204", description = "Série atualizada"),
             @ApiResponse(responseCode = "400", description = "Dados inválidos ou ausentes no corpo da requisição", content = @Content(

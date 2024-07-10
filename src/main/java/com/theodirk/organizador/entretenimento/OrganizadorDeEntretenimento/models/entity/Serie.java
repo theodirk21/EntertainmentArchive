@@ -4,6 +4,7 @@ package com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.mode
 import com.theodirk.organizador.entretenimento.OrganizadorDeEntretenimento.models.TipoEntretenimento;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 @Table(name = "serie")
+@Builder
 public class Serie {
 
     @Id

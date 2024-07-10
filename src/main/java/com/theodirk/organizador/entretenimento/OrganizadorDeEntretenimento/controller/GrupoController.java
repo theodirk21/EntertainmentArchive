@@ -30,7 +30,7 @@ public class GrupoController {
 
 
     @PostMapping(produces = APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADM')")
     @Operation(summary = "Criar grupo de usuários na base de dados")
     @ApiResponses( value = {
             @ApiResponse(responseCode = "201", description = "Grupo criado"),
@@ -48,7 +48,7 @@ public class GrupoController {
     }
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADM')")
     @Operation(summary = "Listar grupos criados")
     @ApiResponses( value = {
             @ApiResponse(responseCode = "200", description = "Grupos criados"),

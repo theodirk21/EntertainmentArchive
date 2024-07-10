@@ -60,7 +60,7 @@ public class FilmeController {
                     mediaType = APPLICATION_JSON_VALUE, schema = @Schema(implementation = ErroResponseDTO.class)
             ))
     })
-    public ResponseEntity<List<Filme>> getFilmesByName(){
+    public ResponseEntity<List<Filme>> getListaDeFilmes(){
         return ResponseEntity.ok(filmeService.getFilmes());
     }
 
